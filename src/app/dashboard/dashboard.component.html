@@ -1,0 +1,72 @@
+<div class="header-nav row">
+  <div class="logo-div col-md-3">
+    <a href="/"><img src="../../../assets/images/Evoke_logo.png" /></a>
+  </div>
+  <div class="col-md-9">
+    <ul >
+      <li class="active"><a href="#">Angular</a></li>
+      <li><a href="#">React JS</a></li>
+      <li><a href="#">Vue</a></li>
+    </ul>
+  </div>
+  
+</div>
+<div class="sub-header">
+  <ul>
+    <li><a href="#">Home</a><span class="arrow-left"></span>Angular<span class="arrow-left"></span>{{title}}</li>
+  </ul>
+  <a href="../../assets/images/angular.pdf" download class="download-btn">Download PDF</a>
+</div>
+<div class="row mt-5 mb-5" id="main-board">
+  <div class="col-md-3">
+    <app-header [data]="data" (loadNavDataEvent)="loadNavData($event)"></app-header>
+  </div>
+  <!-- <div class="col-md-4 description-area">
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+
+    <ul *ngFor="let _subnav of subData?.subDataTitles">
+      <li>{{_subnav.title}}</li>
+    </ul>
+   
+  </div>
+  <div class="col-md-5" id="codeHub">
+
+    <pre class="prettyprint linenums lang-ts" id="code"></pre>
+
+  </div> -->
+ <div class="col-md-9 description-area">
+  <h2>{{title}}</h2>
+  <div id="dropdown-tab">	
+        
+    <div class="tab-wrap" id="data-sec">
+      <input type="radio" id="tab1" name="tabGroup1" class="tab" value="consolidate" checked>
+      <label for="tab1">Description</label>
+      
+      <input type="radio" id="tab3" name="tabGroup1" class="tab" value="reference">
+      <label for="tab3">Reference</label>
+      <input type="radio" id="tab2" name="tabGroup1" class="tab" value="account">
+      <label for="tab2">Code</label>
+      <div class="tab__content">
+        <p>{{description}}</p>
+        <ul *ngFor="let _subnav of subData?.subDataTitles">
+          <li>{{_subnav.title}}</li>
+        </ul>
+      </div>
+      <div class="tab__content">
+        <div *ngFor="let data of exampleCodeLink|splitComma">
+          <a href="{{data}}" target="_blank">{{data}}</a>
+        </div>
+        <!-- <a href="{{exampleCodeLink.split(',')[1]}}" target="_blank">{{exampleCodeLink.split(',')[1]}}</a>
+        <a href="{{exampleCodeLink.split(',')[2]}}" target="_blank">{{exampleCodeLink.split(',')[2]}}</a>
+        <a href="{{exampleCodeLink.split(',')[3]}}" target="_blank">{{exampleCodeLink.split(',')[3]}}</a> -->
+      </div>
+      <div class="tab__content" id="codeHub">
+        <pre class="prettyprint linenums lang-ts" id="code"></pre>
+      </div>
+  </div>
+</div>
+ </div>
+
+</div>
+<app-footer></app-footer>

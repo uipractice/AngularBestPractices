@@ -1,0 +1,336 @@
+[
+  {
+    "id": 1,
+    "category": "strict:true- JS",
+    "title": "strict:true",
+    "description": "If you are starting a new project, it is worth setting strict:true in the tsconfig.json file to enable all strict type checking options.Inside tsconfig.json file add the following entry in compiler options:",
+    "codeSnippet": "https://raw.githubusercontent.com/VinayakRao23/HTMLAssignments/master/HTML/sample2.txt",
+    "isShow": false,
+    "exampleCodeLink": "https://angular.io/guide/strict-mode"
+  },
+  {
+    "id": 2,
+    "category": "ViewEncapsulation",
+    "title": "ViewEncapsulation",
+    "description": "This post outlines some of the best practices we can use in our application to support robust and a highly scalable Angular framework. This write-up is related to Angular, Typescript and RxJs. Additionally, the blog discusses some general coding guidelines to make the application cleaner. Let us begin by evaluating the various features available in the Angular application framework.",
+    "codeSnippet": "",
+    "isShow": false,
+    "exampleCodeLink": "https://angular.io/api/core/ViewEncapsulation,https://stackblitz.com/edit/angular-ivy-jm4mvk"
+  },
+  {
+    "id": 3,
+    "category": "Try Catch",
+    "title": "Try Catch",
+    "description": "Whatever code you write in ts file, try to place it in the catch block.To avoid application breakage. In case, you have missed a null check or accessing some object which is not defined, during the run time the application will break, and the user will not be able to perform any action.",
+    "codeSnippet": "try-catch.txt",
+    "exampleCodeLink": "https://stackblitz.com/edit/angular-try-catch-example-useqf9",
+    "isShow": false
+  },
+  {
+    "id": 4,
+    "category": "Routing (Route Guard, Auth Guard)",
+    "title": "Routing",
+    "description": "Use this option, when there is a need to switch between different pages within the application. This makes the code look cleaner and easy to understand. Make maximum use of the Route Guard and Auth Guard.",
+    "codeSnippet": "",
+    "isShow": false,
+    "exampleCodeLink": "https://stackblitz.com/edit/angular-ivy-djdqih",
+    "subDataTitles": [
+      {
+        "title": "Lazy Load",
+        "description": "Wherever possible, try to Lazy Load the modules in your Angular application. Lazy loading means, you load something only when it is used. For instance, loading a component only when it is to be seen.This will reduce the size of the application to be loaded and can improve the application boot time by not loading the modules that are not required.",
+        "exampleCodeLink": "https://stackblitz.com/edit/angular-ivy-3g3hj7",
+        "codeSnippet": "lazy-load.txt"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "ChangeDetectionStrategy",
+    "title": "Let, Const, Lambda or Arrow Functions",
+    "isShow": false,
+    "description": "When declaring variables, use const when the value is not been reassigned.Using let and const appropriately makes the intention of the declarations clear. It will also help in identifying issues when a value is reassigned to a constant accidentally, by throwing a compile-time error. Further, it also helps to improve the readability of the code.",
+    "codeSnippet": "Before: let empId = “12345”; After: If empId is always constant then change it to const empId=”12345”;",
+    "exampleCodeLink": "https://stackblitz.com/edit/angular-ivy-h6wyo4"
+  },
+  {
+    "id": 6,
+    "category": "trackBy",
+    "title": "trackBy",
+    "isShow": false,
+    "description": "When using ngFor to loop over an array in templates, use it with a trackBy function which will return a unique identifier for each item.When an array changes, Angular re-renders the whole DOM tree. But if you use trackBy, Angular application framework will know which element has changed and will only make DOM changes for that particular element.",
+    "codeSnippet": "lazy-load.txt",
+    "exampleCodeLink": "https://stackblitz.com/edit/angular-ivy-injtwa"
+  },
+  {
+    "id": 7,
+    "category": "No Function Calling in NgIf",
+    "title": "No Function Calling in NgIf",
+    "isShow": false,
+    "description": "NgIf executes on each DOM change and there are chances that the browser might reach the maximum call stack size and throw a script error.",
+    "codeSnippet": "functionCalling.txt",
+    "exampleCodeLink": "https://stackblitz.com/edit/angular-ivy-r2j4vp"
+  },
+  {
+    "id": 8,
+    "category": "Do Not Repeat Yourself",
+    "title": "Do Not Repeat Yourself",
+    "isShow": false,
+    "description": "Make sure you do not have the same code copied at different places in the codebase. Extract the repeating code and use it in place of the repeated code.Having the same code in multiple places means that if we want to make a change to the logic in the code, we have to do it at multiple places. This makes it difficult to maintain and prone to bugs. Further, it takes time to make changes to the logic. In those cases, extract the repeating code and use it instead, which means there would be only one place to change.",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://angular.io/guide/styleguide"
+  },
+  {
+    "id": 9,
+    "category": "Clean up Subscriptions",
+    "title": "Clean up Subscriptions",
+    "isShow": false,
+    "description": "Destroy the Subscriptions to avoid any memory leak. When subscribing to Observables, always make sure you unsubscribe them by using operators such as take, takeUntil, etc.Failing to unsubscribe from the Observables will lead to unwanted memory leaks if the Observable stream is left open. Potentially, even after a component has been destroyed or the user has navigated to another page.",
+    "codeSnippet": "cleanSubscriptions.txt",
+    "exampleCodeLink": "https://angular.io/guide/observables"
+  },
+  {
+    "id": 10,
+    "category": "Avoid Including Subscriptions Inside Subscriptions",
+    "title": "Avoid Including Subscriptions Inside Subscriptions",
+    "isShow": false,
+    "description": "Sometimes you may want values from more than one Observable to perform an action. In such cases, avoid subscribing to one Observable in the Subscribe block of another Observable. Instead, use appropriate chaining operators. Chaining operators run on Observables from the operator before them. Some chaining operators are withLatestFrom and CombineLatest.",
+    "codeSnippet": "subscriptions.txt",
+    "exampleCodeLink": "https://angular.io/guide/observables"
+  },
+  {
+    "id": 10,
+    "category": "Avoid Including Subscriptions Inside Subscriptions",
+    "title": "Avoid Including Subscriptions Inside Subscriptions",
+    "isShow": false,
+    "description": "Sometimes you may want values from more than one Observable to perform an action. In such cases, avoid subscribing to one Observable in the Subscribe block of another Observable. Instead, use appropriate chaining operators. Chaining operators run on Observables from the operator before them. Some chaining operators are withLatestFrom and CombineLatest.",
+    "codeSnippet": "subscriptions.txt",
+    "exampleCodeLink": "https://angular.io/guide/observables"
+  },
+  {
+    "id": 11,
+    "category": "Subscribe in Template (Angular 5 and Above)",
+    "title": "Subscribe in Template (Angular 5 and Above)",
+    "isShow": false,
+    "description": "Avoid subscribing to Observables from components. Instead, subscribe to the Observables from the template.Async Pipes unsubscribe themselves automatically making the code simpler by eliminating the need to manually manage subscriptions. Further, it reduces the risk of accidentally forgetting to unsubscribe a subscription in the component, which would possibly cause a memory leak.",
+    "codeSnippet": "Template.txt",
+    "exampleCodeLink": "https://angular.io/guide/observables"
+  },
+  {
+    "id": 12,
+    "category": "AOT (Ahead-of-Time Compilation)",
+    "title": "AOT (Ahead-of-Time Compilation)",
+    "isShow": false,
+    "description": "Faster rendering, fewer asynchronous requests, smaller Angular application framework download size.",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://angular.io/guide/aot-compiler"
+  },
+  {
+    "id": 13,
+    "category": "Unit Testing",
+    "title": "Unit Testing",
+    "isShow": false,
+    "description": "If possible, write unit test cases (code coverage) using Jasmine or any other unit testing tool.This will ensure that your code is not breaking anywhere. Additionally, it also ensures that you don’t have any unused imports. Here’s a link for your reference.Avoid NgIf for SVG tags, Internet Explorer web browser throws an error for this syntax (i.e. for older versions of Angular, below Angular 4).Do not use NgFor and NgIf on the same element, Angular will not allow it.Use ngContainer to loop NgFor and use NgIf on the immediate element.Additionally, you can go through the official Angular style guide to learn about the best practice.Building web applications and scaling them is a continuous exercise, and there’s always scope to improve the way we write code and build apps. This list of optimizations is a great place to start and applying these things to your project will make your application clean, less buggy and enhance the angular application performance.",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://jasmine.github.io/ ,https://angular.io/guide/testing ,https://angular.io/guide/styleguide"
+  },
+  {
+    "id": 14,
+    "category": "Functional",
+    "isShow": false,
+    "title": "Code structure",
+    "description": "Code structure should be created using proper design pattern of Angular like MVC, Prototype, Modular, Many more. if we have the requirement of simple angular application with straight NgRx implementation then the application has to be divided in proper folder structure containing actions, reducers and store. ",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://angular.io/guide/styleguide"
+  },
+  {
+    "id": 15,
+    "category": "Readability & Maintenance",
+    "title": "Readability & Maintenance",
+    "isShow": false,
+    "description": "Be Consistent while creating coding styles Involves below points.Make sure each component not exceeding more then 400 – 500 lines of code.Make functions which wont exceed more then 60 – 80 lines and if such cases use chunks.If any value is intact in an application the use Const.Use –(dash) and .(dots) to separate the values and descriptive name from the type of it.Use lower camel case when declaring the property name.Import statement should be properly readable in terms of leaving spaces and lines between then third party and inbuilt statements. ",
+    "codeSnippet": "",
+    "exampleCodeLink": "ReadabilityAndMaintainance.txt,https://www.ideas2it.com/blogs/angular-development-best-practices/"
+  },
+  {
+    "id": 17,
+    "category": "Quality of the code",
+    "title": "Quality of the code",
+    "isShow": false,
+    "description": "Quality of the code",
+    "codeSnippet": "",
+    "exampleCodeLink": "QualityOfCode.txt,https://dev.to/meenakshi052003/how-to-improve-an-angularjs-application-code-2cfe"
+  },
+  {
+    "id": 18,
+    "category": "ECMAScript (ES6)",
+    "title": "ECMAScript (ES6)",
+    "isShow": false,
+    "description": "ECMAScript (ES6)",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://stackblitz.com/edit/angularjs-es6-basic-1nappq"
+  },
+  {
+    "id": 19,
+    "category": "trackBy",
+    "title": "trackBy",
+    "isShow": false,
+    "description": "trackBy",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://stackblitz.com/edit/angular-ivy-injtwa"
+  },
+  {
+    "id": 29,
+    "category": "Reusable component",
+    "title": "Reusable component",
+    "isShow": false,
+    "description": "This helps to handle the application in proper way which leads to de duplication in terms of efforts and code.Identify the components – Analyze the application in term of reusability and logic",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://stackblitz.com/edit/angular-ivy-2wlk9r"
+  },
+  {
+    "id": 30,
+    "category": "Lazy Loading",
+    "title": "Lazy Loading",
+    "isShow": false,
+    "description": "This helps to handle the application in proper way which leads to de duplication in terms of efforts and code.Identify the components – Analyze the application in term of reusability and logic",
+    "codeSnippet": "",
+    "exampleCodeLink": "LazyLoading.txt,https://stackblitz.com/edit/angular-ivy-3g3hj7"
+  },
+  {
+    "id": 31,
+    "category": "Use Shared Module Concept",
+    "title": "Use Shared Module Concept",
+    "isShow": false,
+    "description": "When we use the lazy load concept, usage of the modules with different components/ modules are different In that case we can create the shared module where we combine all the must / common modules will be used by the lazy modules",
+    "codeSnippet": "",
+    "exampleCodeLink": "sharedModule.txt,https://www.pluralsight.com/guides/using-shared-modules-in-angular"
+  },
+  {
+    "id": 32,
+    "category": "Use index.ts",
+    "title": "Use index.ts",
+    "isShow": false,
+    "description": "This helps to place related things together , which helps to source file name which helps to decrease the size of the import statement",
+    "codeSnippet": "",
+    "exampleCodeLink": "indexCode.txt,https://stackblitz.com/edit/angularjs-typescript-basic-wzwftd"
+  },
+  {
+    "id": 33,
+    "category": "Don’t write logic in templates",
+    "title": "Don’t write logic in templates",
+    "isShow": false,
+    "description": "All the template logic will be covered and extracted into component which helps in writing the unit test cases ",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://dzone.com/articles/why-we-shound-not-use-function-inside-angular-temp"
+  },
+  {
+    "id": 34,
+    "category": "Always cache your API’s",
+    "title": "Always cache your API’s",
+    "isShow": false,
+    "description": "all API’s responses wont change frequently, then cache it in store/storage",
+    "codeSnippet": "",
+    "exampleCodeLink": "cacheApis.txt"
+  },
+  {
+    "id": 35,
+    "category": "Use Async pipe in templates",
+    "title": "Use Async pipe in templates",
+    "isShow": false,
+    "description": "Observables can be directly used in templates with ASYNC pipe , instead of Vanilla JS values, when the templates destroyed then the subscription will be unsubscribed automatically {{name  | async }}",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://stackblitz.com/edit/async-pipe-aunvtw"
+  },
+  {
+    "id": 36,
+    "category": "Avoid “any” type",
+    "title": "Avoid “any” type",
+    "isShow": false,
+    "description": "This helps to overcome unintended problem ",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/"
+  },
+  {
+    "id": 37,
+    "category": "Reduce the final Build size",
+    "title": "Reduce the final Build size",
+    "isShow": false,
+    "description": "Avoid nested subscriptions and clear if there any.Nested subscriptions impact on performance of an application, if any subscription made in logic make sure u are unsubscribe the same on destroying the component. ",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://conorliv.com/tips-to-reduce-angular-app-size.html"
+  },
+  {
+    "id": 38,
+    "category": "logic in proper time and space complexity",
+    "title": "logic in proper time and space complexity",
+    "isShow": false,
+    "description": "Any application / logic implementation mainly depepndednt on implementation steps made by the coder,Any code can be written to achieve the logic with better and best implementation.Please go theough below url https://www.jenniferbland.com/time-complexity-analysis-in-javascript/",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/"
+  },
+  {
+    "id": 38,
+    "category": "Environment variable",
+    "title": "Environment variable",
+    "isShow": false,
+    "description": "Environment plays very important role in angular build, u can use build time environment files to configure the URLS",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://stackblitz.com/edit/angular-ivy-qyzdey"
+  },
+  {
+    "id": 38,
+    "category": "Unit Test cases & End to end test cases",
+    "title": "Unit Test cases & End to end test cases",
+    "isShow": false,
+    "description": "Testing your Angular application helps you check that your app is working as you expect.",
+    "codeSnippet": "",
+    "exampleCodeLink": "unitTestCases.txt,https://angular.io/guide/testing"
+  },
+  {
+    "id": 39,
+    "category": "NgRX state management in Angular",
+    "title": "NgRX state management in Angular",
+    "isShow": false,
+    "description": "Application state or any app is technically  the entire memory of the application, but, usually , it is the data received via API (get/post) calls, user user inputs , presentation UI State, app preferences,it is the data that can differentiate two instances of the same application. ",
+    "codeSnippet": "",
+    "exampleCodeLink": "https://stackblitz.com/edit/ngrx-effects-example-ksqfjn",
+    "subDataTitles": [
+      {
+        "title": "Efffects",
+        "description": "Efffects",
+        "exampleCodeLink": "https://stackblitz.com/edit/ngrx-effects-example-ksqfjn",
+        "codeSnippet": "Effects.txt"
+      },
+      {
+        "title": "Reducer",
+        "description": "Reducer",
+        "exampleCodeLink": "https://stackblitz.com/edit/ngrx-effects-example-ksqfjn",
+        "codeSnippet": "Reducer.txt"
+      },
+      {
+        "title": "indexjs",
+        "description": "import { DataEffects } from './data.effect'; export const effects: any[] = [DataEffects];",
+        "exampleCodeLink": "https://stackblitz.com/edit/ngrx-effects-example-ksqfjn",
+        "codeSnippet": "indexjs.txt"
+      },
+      {
+        "title": "Index.ts – effects ",
+        "description": "Index.ts – effects ",
+        "exampleCodeLink": "https://stackblitz.com/edit/ngrx-effects-example-ksqfjn",
+        "codeSnippet": "Effects.txt"
+      },
+      {
+        "title": "Actions ",
+        "description": "Actions ",
+        "exampleCodeLink": "https://stackblitz.com/edit/ngrx-effects-example-ksqfjn",
+        "codeSnippet": "ActionsCode.txt"
+      },
+      {
+        "title": "Use services to create  ",
+        "description": "Use services to create  ",
+        "exampleCodeLink": "https://stackblitz.com/edit/ngrx-effects-example-ksqfjn",
+        "codeSnippet": "UseServices.txt"
+      }
+    ]
+  }
+]

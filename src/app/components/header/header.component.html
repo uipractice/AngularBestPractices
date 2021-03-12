@@ -1,0 +1,27 @@
+
+<div class="dropdown custom-dropdown" mdbDropdown>
+
+  <button mdbDropdownToggle mdbBtn class="dropdown-toggle waves-light" type="button" mdbWavesEffect>
+    <i class="fab fa-angular"></i> Angular
+  </button>
+
+  <div class="dropdown-menu dropdown-primary">
+    <a class="dropdown-item" href="#"> <i class="fab fa-angular"></i> Angular</a>
+    <a class="dropdown-item" href="#"> <i class="fab fa-react"></i> React JS</a>
+    <a class="dropdown-item" href="#"> <i class="fab fa-vuejs"></i> Vue</a>
+  </div>
+</div>
+<div class="side-nav-block">
+<ul *ngFor="let _nav of data" class="list ml-3">
+  <li (click)="loadNavData(_nav)"  
+  [class.active]="_nav === selectedItem"
+ > <span>{{_nav.title}}</span> </li>
+  <div *ngIf="_nav.isShow ">
+    <ul *ngFor="let _subnav of _nav.subDataTitles" (click)="loadSubNavData(_subnav)">
+      <li [class.active]="_subnav === selectedItem">{{_subnav.title}}</li>
+    </ul>
+  </div>
+</ul>
+</div>
+
+
