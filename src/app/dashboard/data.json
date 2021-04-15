@@ -4,7 +4,7 @@
     "category": "strict:true- JS",
     "title": "strict:true",
     "description": "If you are starting a new project, it is worth setting strict:true in the tsconfig.json file to enable all strict type checking options.Inside tsconfig.json file add the following entry in compiler options:",
-    "codeSnippet": "https://raw.githubusercontent.com/VinayakRao23/HTMLAssignments/master/HTML/sample2.txt",
+    "codeSnippet": "'compilerOptions':{'strict':true,}",
     "isShow": false,
     "exampleCodeLink": "https://angular.io/guide/strict-mode"
   },
@@ -13,7 +13,7 @@
     "category": "ViewEncapsulation",
     "title": "ViewEncapsulation",
     "description": "This post outlines some of the best practices we can use in our application to support robust and a highly scalable Angular framework. This write-up is related to Angular, Typescript and RxJs. Additionally, the blog discusses some general coding guidelines to make the application cleaner. Let us begin by evaluating the various features available in the Angular application framework.",
-    "codeSnippet": "",
+    "codeSnippet": "`@Component({selector: 'my-app',template: `<h1>Hello World!</h1>`, styles: [`:host {display: block;border: 1px solid black;}h1 {color: blue;} `], encapsulation: ViewEncapsulation.None})`",
     "isShow": false,
     "exampleCodeLink": "https://angular.io/api/core/ViewEncapsulation,https://stackblitz.com/edit/angular-ivy-jm4mvk"
   },
@@ -260,7 +260,7 @@
     "exampleCodeLink": "https://conorliv.com/tips-to-reduce-angular-app-size.html"
   },
   {
-    "id": 38,
+    "id": 40,
     "category": "logic in proper time and space complexity",
     "title": "logic in proper time and space complexity",
     "isShow": false,
@@ -278,7 +278,7 @@
     "exampleCodeLink": "https://stackblitz.com/edit/angular-ivy-qyzdey"
   },
   {
-    "id": 38,
+    "id": 41,
     "category": "Unit Test cases & End to end test cases",
     "title": "Unit Test cases & End to end test cases",
     "isShow": false,

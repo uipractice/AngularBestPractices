@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard.component';
 import { HeaderComponent } from '../components/header/header.component';
 import { SharedModuleModule } from '../shared.module';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { PrismModule } from '@ngx-prism/core';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     CommonModule,
     DashboardRoutingModule,
     SharedModuleModule,
+    PrismModule,
     MDBBootstrapModule.forRoot(),
 
   ]
