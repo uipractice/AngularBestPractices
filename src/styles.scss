@@ -19,3 +19,13 @@ body{
     }
   }
 }
+@media(max-width:768px){
+  body{
+    overflow:auto;
+  }
+  .side-nav-block{
+    position: relative !important;
+    top: 0 !important;
+    height: 50vh !important;
+  }
+}

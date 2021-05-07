@@ -98,53 +98,124 @@ export class DashboardComponent implements OnInit, AfterViewChecked {
 
             selector: 'my-app',
             
-            template: '<h1>Hello World!</h1>',
+            template: './app.component.html',
             
             styles: [':host { display:block; } h1{ color:blue; }'],
             
             encapsulation: ViewEncapsulation.None
             
             })`;
-  content2=`Try {
-
-            //your code goes here
-            
-            } catch(e){
-            
-            Console.log(“Error occurred”+e);
-            
-            } `;
+  contentHtml1=`<h1>Hello World!</h1>
+              <p>
+                ViewEncapsulation example
+              </p>`;
+content2=`testFunc1() {
+            console.log(this.blankObject.test);
+            console.log("This doesn't get executed.");
+          } 
+          testFunc2() {
+            try {
+              console.log(this.blankObject.test);
+            } catch (e) {
+              console.error(e);
+            }
+            console.log("This DOES get executed.");
+          }
+          testFunc3() {
+            try {
+              console.log(this.blankObject.test);
+            } catch (e) {}
+            console.log("This DOES get executed.");
+          }`;
+  contenthtml2=`<div>Open the console to see the errors.</div>
+              <br>
+              <button (click)="testFunc1()">testFunc1</button>
+              <br>
+              <button (click)="testFunc2()">testFunc2</button>
+              <br>
+              <button (click)="testFunc3()">testFunc3</button>`;
+              
   content3=`RouterModule.forRoot([
-            { path: "home", component: HomeComponent },
-            { path: "about", component: AboutViewComponent }
-          ])`;
-  content4=`Before:
-            {  path: 'not-lazy-loaded', component: NotLazyLoadedComponent }
+              { path: "home", component: HomeComponent },
+              { path: "about", component: AboutViewComponent }
+            ])`;
+  contenthtml3=`<div class="container">
+              <a routerLinkActive="active" routerLink="/home">Home</a> |
 
-            After:
-            {  path: 'lazy-load', loadChildren: 'lazy- load.module#LazyLoadModule' }`;
-  content5=`Before: let empId = “12345”;
+              <a routerLinkActive="active" routerLink="/about">About</a>
 
-          After: If empId is always constant then change it to const empId=”12345”;
-  `;
-  content6=`Before: <li *ngFor="let item of items;">{{ item }}</li>
+            </div>
+            <router-outlet></router-outlet>`;
+  content4=`const routes: Routes = [
+              {
+                path: "about",
+                loadChildren: () =>
+                  import("../about/about.module").then(mod => mod.AboutModule)
+              }
+            ];`;
+  contenthtml4=`<div class="container">
+                <a routerLinkActive="active" routerLink="/home">Home</a> |
 
-          After: <li *ngFor="let item of items; trackBy: trackByFn">{{ item }}</li>
-          
-          // in the component
-          
-          trackByFn(index, item) { return index // or item.id; }
+                <a routerLinkActive="active" routerLink="/about">About</a>
+
+              </div>
+              <router-outlet></router-outlet>`;
+  content5=`const sum = (x, y) => {
+              return x + y;
+            };
+            sum = sum(2, 3);
+            `;
+  contenthtml5=`<h1>{{sum}}</h1>`;
+
+  content6=`array = [
+              { id: 1, name: "Pen" },
+              { id: 2, name: "Book" },
+              { id: 3, name: "School" }
+            ];
+
+            foo() {
+              this.array = [
+                { id: 1, name: "College" },
+                { id: 2, name: "Book" },
+                { id: 3, name: "School" }
+              ];
+            }
+
+            identify(index, item) {
+              return item.id;
+            } `;
+  contenthtml6=`<div *ngFor="let e of array; trackBy: identify">
+                {{e.id}} - {{e.name}}
+              </div>
+              <button (click)="foo()">Click</button>
+              <p>
+                Using trackBy
+              </p>`;
+  content7=`show = false;
+            buttonName = 'Show';
+            hide: any;
+
+            toggle() {
+            this.show = !this.show
+
+            if(this.show) {
+              this.buttonName = 'Hide'
+              console.log(this.show)
+            }
+            else {
+              this.buttonName = 'Show'
+            }
+            }
           `;
-  content7=`Before: <div *ngIf=”showData()”></div>
-
-          After: <div *ngIf=”showData”></div>
-          
-          //inside component
-          
-          public showData: boolean = false;
-          
-          show() { this.showData = true; }
-          `;
+  contenthtml7=`<button mat-raised-button (click)="toggle()">{{buttonName}}</button>
+              <div *ngIf="show">
+                <p>Part A</p>
+                <p>{{show}}</p>
+              </div>
+              <div *ngIf="!(show)">
+                <p>Part B</p>
+                <p>{{show}}</p>
+              </div>`;
   content8=`Before:
 
           anObservable.pipe(map(value =>value.item)).subscribe(item => this.textToDisplay = item);
@@ -181,26 +252,20 @@ export class DashboardComponent implements OnInit, AfterViewChecked {
           // template <p>{{ textToDisplay$ | async }}</p>
           
           // component this.textToDisplay$ = someObservable.pipe(map(value => value.item));`;
-  content11=`@Component({
-              selector: 'app-typical',
-              template: '<div>A typical component for {{data.name}}</div>'
-            })
-            export class TypicalComponent {
+  content11=`export class TypicalComponent {
               @Input() data: TypicalData;
               constructor(private someService: SomeService) { ... }
             }`;
-  content12=`<li *ngFor=”let data of dataItems; trackByL trackByFn” >
-              {{item.name}}
-            </li>
-
-            Ts:
-
-            trackByFn(index,data){
-
-            return index
-
+  contenthtml11=`<div>A typical component for {{data.name}}</div>`;
+  
+  content12=`trackByFn(index,data){
+                return index
             }
             `;
+  contenthtml12=`<li *ngFor=”let data of dataItems; trackByL trackByFn” >
+                  {{item.name}}
+                </li>`;
+
   content13=`const routes: Routes = [ { path: 'customers', loadChildren: () =>
             import('./customers/customers.module').then(m => m.CustomersModule) }, { path:
             'orders', loadChildren: () => import('./orders/orders.module').then(m =>
@@ -261,18 +326,62 @@ export class DashboardComponent implements OnInit, AfterViewChecked {
           
           export { HeroComponent } from './hero.component';
           `;
-  content16=`{{name | async }}`;
+  content16=`export class AsyncPipeComponent implements OnDestroy {
+            promise: Promise<string>;
+            observable: Observable<number>;
+            subscription: Object = null;
+            observableData: number;
+          
+            constructor() {
+              this.promise = this.getPromise();
+              this.observable = this.getObservable();
+              this.subscribeObservable();
+            }
+          
+            getObservable() {
+              return Observable.interval(1000)
+                .take(10)
+                .map(v => v * v);
+            }
+          
+            // AsyncPipe subscribes to the observable automatically
+            subscribeObservable() {
+              this.subscription = this.getObservable().subscribe(
+                v => (this.observableData = v)
+              );
+            }
+          
+            getPromise() {
+              return new Promise((resolve, reject) => {
+                setTimeout(() => resolve("Promise complete!"), 3000);
+              });
+            }
+          
+            // AsyncPipe unsubscribes from the observable automatically
+            ngOnDestroy() {
+              if (this.subscription) {
+                this.subscription.unsubscribe();
+              }
+            }
+          }`;
+  contenthtml16=`<p class="card-text" ngNonBindable>{{ promise | async }}  </p>
+                <p class="card-text">{{ promise | async }}  </p>
+
+                <p class="card-text" ngNonBindable>{{ observable | async }}  </p>
+                <p class="card-text">{{ observable | async }}</p>
+
+                <p class="card-text" ngNonBindable>{{ observableData }}  </p>
+                <p class="card-text">{{ observableData }}</p>`;
+
   content17=`export const environment = {
 
-            production: false,
-          
-            firebase: {
-          
-            apiKey: 'API_KEY',
-          
-            },
-          
-          };`;
+              production: false,
+            
+              mode: "Local"
+            
+            };`;
+  contenthtml17=`<div>Current environment: {{mode}}</div>`;
+
   content18=`import { Injectable } from "@angular/core";
 
             import { Actions, Effect, ofType } from "@ngrx/effects";
@@ -323,6 +432,16 @@ export class DashboardComponent implements OnInit, AfterViewChecked {
             
             }
   `;
+  contenthtml18=`<button (click)="getApiData()">GET API DATA</button>
+
+                <button (click)="getError()">GET API DATA with ERROR</button>
+                
+                <div class="data-container">
+                  <h2>Application state</h2>
+                  <span class="error">Error: {{JSON.stringify((this.error$ | async)) || 'null'}} </span><br />
+                  <span class="data">Data: {{(JSON.stringify(this.data$ | async)) || 'null'}} </span>
+                </div>`;
+                
   content19:`import * as fromData from "../actions/cart.actions";
 
             import { act } from "@ngrx/effects";
@@ -681,4 +800,46 @@ export class DashboardComponent implements OnInit, AfterViewChecked {
             export const getNoteById = (state: DataState, props: { id: string }) =>
             
               state.data.find((note) => note.id === props.id);`;
+
+    content25=`export class AppComponent {
+              title = "appcomponent";
+              posts = [
+                {
+                  id: 1,
+                  title: "Header Component"
+                },
+                {
+                  id: 2,
+                  title: "Footer Component"
+                },
+                {
+                  id: 3,
+                  title: "Post Component"
+                }
+              ];
+            }`;
+    contenthtml25=`<app-header></app-header>
+              <h1>Reusable Components</h1>
+              <app-post *ngFor="let post of posts" [post]="post"></app-post>
+              <app-footer></app-footer>`;
+    content26=`export class Store {
+              constructor() {
+              }
+            
+              _count = 0;
+              get count() {
+                return this._count;
+              }
+            
+              set count(val) {
+                this._count = val;
+              }
+            
+              incrementCount() {
+                this.count = this.count + 1;
+                console.warn(this.count);
+              }
+            
+            }`;
+    contenthtml26=`<div>{{ $ctrl.store.count }}</div>`;
 }

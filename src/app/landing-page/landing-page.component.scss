@@ -131,3 +131,17 @@
   .image-section{
     margin-top: 50px;
   }
+
+  @media(max-width:448px){
+    #main-board{
+      h2{
+        font-size: 20px;
+        padding-top: 20px;
+      }
+    }
+    .header-nav{
+      ul{
+        display: none;
+      }
+    }
+  }

@@ -64,129 +64,541 @@
       <div class="tab__content"  *ngIf=" id == 1 ">
         <!-- <pre class="prettyprint linenums lang-ts" id="code"></pre> -->
         <!-- {{codeSnippet}} -->
-        <ngx-prism [language]="'html'" >
-          {{codeSnippet}}
-        </ngx-prism>
+        
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            /* No HTML for this example */
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'" >
+              {{codeSnippet}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 2 ">
-        <ngx-prism [language]="'html'" >
-          {{content1}}
-        </ngx-prism>
+        
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contentHtml1}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content1}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 3 ">
-        <ngx-prism [language]="'html'" >
-          {{content2}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml2}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content2}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 4 ">
-        <ngx-prism [language]="'html'" >
-          {{content3}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml3}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content3}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" title == 'Lazy Load' ">
-        <ngx-prism [language]="'html'" >
-          {{content4}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml4}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content4}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 5 ">
-        <ngx-prism [language]="'html'" >
-          {{content5}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml5}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content5}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 6 ">
-        <ngx-prism [language]="'html'" >
-          {{content6}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml6}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content6}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 7 ">
-        <ngx-prism [language]="'html'" >
-          {{content7}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml7}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content7}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 9 ">
-        <ngx-prism [language]="'javascript'" >
-          {{content8}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            /* No HTML for this example */
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content8}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 10 ">
-        <ngx-prism [language]="'javascript'" >
-          {{content9}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            /* No HTML for this example */
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content9}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 11 ">
-        <ngx-prism [language]="'javascript'" >
-          {{content10}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            /* No HTML for this example */
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content10}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 12 ">
-        <ngx-prism [language]="'javascript'" >
-          {{content11}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml11}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content11}}
+            </ngx-prism>
+          </div>
+          
+        </div>
+      </div>
+      <div class="tab__content"  *ngIf=" id == 18 ">
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml26}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content26}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 19 ">
-        <ngx-prism [language]="'html'" >
-          {{content12}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml6}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content6}}
+            </ngx-prism>
+          </div>
+          
+        </div>
+      </div>
+      <div class="tab__content"  *ngIf=" id == 29 ">
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml25}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content25}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 30 ">
-        <ngx-prism [language]="'javascript'" >
-          {{content13}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml4}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content4}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 31 ">
-        <ngx-prism [language]="'html'" >
-          {{content14}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            /* No HTML for this example */
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content14}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 32 ">
-        <ngx-prism [language]="'javascript'" >
-          {{content15}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            /* No HTML for this example */
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content15}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 35 ">
-        <ngx-prism [language]="'html'" >
-          {{content16}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml16}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content16}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 38 ">
-        <ngx-prism [language]="'javascript'" >
-          {{content17}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml17}}
+            </ngx-prism>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content17}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" id == 39 ">
-        <ngx-prism [language]="'javascript'" >
-          {{content18}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml18}}
+            </ngx-prism>
+            <a href="https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts">https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts</a>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content18}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" title == 'Efffects' ">
-        <ngx-prism [language]="'javascript'" >
-          {{content18}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml18}}
+            </ngx-prism>
+            <a href="https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts">https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts</a>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content18}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" title == 'Reducer' ">
-        <ngx-prism [language]="'javascript'" >
-          {{content24}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml18}}
+            </ngx-prism>
+            <a href="https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts">https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts</a>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content24}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" title == 'indexjs' ">
-        <ngx-prism [language]="'javascript'" >
-          {{content20}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml18}}
+            </ngx-prism>
+            <a href="https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts">https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts</a>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content20}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" title == 'Index.ts – effects ' ">
-        <ngx-prism [language]="'javascript'" >
-          {{content21}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml18}}
+            </ngx-prism>
+            <a href="https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts">https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts</a>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content21}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" title == 'Actions ' ">
-        <ngx-prism [language]="'javascript'" >
-          {{content22}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml18}}
+            </ngx-prism>
+            <a href="https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts">https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts</a>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content22}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
       <div class="tab__content"  *ngIf=" title == 'Use services to create  ' ">
-        <ngx-prism [language]="'javascript'" >
-          {{content23}}
-        </ngx-prism>
+        <div class="tabs">
+          <input type="radio" name="tabs" id="tabone" checked="checked">
+          <label for="tabone">HTML</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'html'">
+              {{contenthtml18}}
+            </ngx-prism>
+            <a href="https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts">https://stackblitz.com/edit/ngrx-effects-example-ksqfjn?file=src%2Fapp%2Fapp.component.ts</a>
+          </div>
+          
+          <input type="radio" name="tabs" id="tabtwo">
+          <label for="tabtwo">TypeScript</label>
+          <div class="tab_inner">
+            <ngx-prism [language]="'javascript'" >
+              {{content23}}
+            </ngx-prism>
+          </div>
+          
+        </div>
       </div>
   </div>
 </div>
